@@ -1,23 +1,20 @@
-// Animación de la carta
 window.addEventListener("load", () => {
   const stage = document.querySelector('.stage');
   stage.classList.add('open');
 
-  // Después de 25 segundos, mostrar video a pantalla completa
+  // Después de 8 segundos, cambiar texto por video
   setTimeout(() => {
-    // Ocultar el texto de la carta
-    document.getElementById('texto').style.display = 'none';
-    
-    // Mostrar el div del video a pantalla completa
-    const videoEl = document.getElementById('video');
-    videoEl.style.display = 'flex'; // usar flex para centrar el video
-    
-    // Reproducir automáticamente
-    const vid = videoEl.querySelector("video");
-    vid.play().catch(err => {
-      console.log("El navegador bloqueó el autoplay:", err);
-    });
-  }, 25000); // tiempo en ms antes de que aparezca el video
+  document.getElementById('texto').style.display = 'none';
+  
+  const videoEl = document.getElementById('video');
+  videoEl.style.display = 'block';
+  
+  // Reproducir automáticamente al aparecer
+  const vid = videoEl.querySelector("video");
+  vid.play().catch(err => {
+    console.log("El navegador bloqueó el autoplay:", err);
+  });
+}, 20000); 
 });
 
 // Login
