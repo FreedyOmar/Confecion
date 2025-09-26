@@ -1,6 +1,4 @@
-/* ------------------------------ */
-/* Fondo y cuerpo de la página    */
-/* ------------------------------ */
+/* Fondo */
 body {
   margin: 0;
   padding: 0;
@@ -13,9 +11,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* ------------------------------ */
-/* Escenario                        */
-/* ------------------------------ */
+/* Escenario */
 .stage {
   position: relative;
   width: 320px;
@@ -23,9 +19,7 @@ body {
   perspective: 1000px;
 }
 
-/* ------------------------------ */
-/* Sobre base                       */
-/* ------------------------------ */
+/* Sobre base */
 .envelope {
   width: 100%;
   height: 100%;
@@ -37,9 +31,7 @@ body {
   overflow: hidden;
 }
 
-/* ------------------------------ */
-/* Tapa en forma de corazón         */
-/* ------------------------------ */
+/* Tapa en forma de corazón */
 .flap {
   position: absolute;
   top: -40px;
@@ -72,9 +64,7 @@ body {
   top: -50px;
 }
 
-/* ------------------------------ */
-/* Tapa inferior                    */
-/* ------------------------------ */
+/* Tapa inferior */
 .envelope::after {
   content: "";
   position: absolute;
@@ -88,9 +78,7 @@ body {
   z-index: 2;
 }
 
-/* ------------------------------ */
-/* Tapas laterales                  */
-/* ------------------------------ */
+/* Tapas laterales */
 .envelope::before {
   content: "";
   position: absolute;
@@ -106,9 +94,7 @@ body {
   opacity: 0.8;
 }
 
-/* ------------------------------ */
-/* Carta                             */
-/* ------------------------------ */
+/* Carta */
 .letter {
   width: 280px;
   min-height: 160px;
@@ -136,11 +122,9 @@ body {
   transition: opacity 5s ease 3s, transform 5s ease 5s;
 }
 
-/* ------------------------------ */
-/* Animaciones al abrir            */
-/* ------------------------------ */
+/* Animaciones al abrir */
 .stage.open .flap {
-  transform-origin: center bottom;
+   transform-origin: center bottom;
   transform: translateX(-50%) rotate(225deg); /* el corazón se abre */
 }
 
@@ -152,26 +136,4 @@ body {
 .stage.open .letter .content {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* ------------------------------ */
-/* Video pantalla completa          */
-/* ------------------------------ */
-#video {
-  position: fixed;       /* fijo sobre toda la pantalla */
-  top: 0;
-  left: 0;
-  width: 100vw;          /* ancho completo de la ventana */
-  height: 100vh;         /* alto completo de la ventana */
-  background: black;     /* fondo mientras carga */
-  z-index: 9999;         /* encima de todo */
-  display: none;         /* oculto al inicio */
-  justify-content: center;
-  align-items: center;
-}
-
-#video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* mantiene proporción y cubre toda la pantalla */
 }
