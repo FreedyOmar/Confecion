@@ -4,21 +4,27 @@
   <meta charset="UTF-8">
   <title>Carta de confecion</title>
   <link rel="stylesheet" href="carta.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="stage">
     <div class="envelope">
       <div class="flap"></div> <!-- tapa del sobre -->
     </div>
-    <div class="letter">
-      <div class="content">
-        <h2>💌 Para ti</h2>
-        <p>Quiero decirte algo especial...</p>
-        <p>Siempre estaré contigo ❤️</p>
-      </div>
-    </div>
+<div class="letter">
+  <div class="content" id="texto">
+    <h2>💌 Para ti</h2>
+    <p>Quiero decirte algo especial...</p>
+    <p>Siempre estaré contigo ❤️</p>
   </div>
 
+  <div class="content" id="video" style="display:none;">
+   <video width="250" controls  muted   >
+      <source src="video.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+  </div>
+</div>
   <script>
     window.onload = () => {
       document.querySelector('.stage').classList.add('open');
@@ -26,3 +32,4 @@
   </script>
 </body>
 </html>
+
