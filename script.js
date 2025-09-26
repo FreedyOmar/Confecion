@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
   vid.play().catch(err => {
     console.log("El navegador bloqueó el autoplay:", err);
   });
-}, 20000); 
+}, 25000); 
 });
 
 // Login
@@ -37,3 +37,4 @@ document.getElementById("loginForm")?.addEventListener("submit", function(event)
     errorMsg.textContent = "❌ Usuario o contraseña incorrectos";
   }
 });
+
